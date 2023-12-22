@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
+import AutoComplete from '../AutoComplete'
 
 const Header = () => {
+
+  
   return (
     <>
       <div id="main_layout">
@@ -51,7 +54,8 @@ const Header = () => {
                       </svg>
                       <span class="sr-only">Search icon</span>
                     </div>
-                    <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm border-b border-solid border-[#448ac0] text-gray-900 rounded focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none" placeholder="Search Test and Packages"  />
+                    <AutoComplete />
+                    
 
                   </div>
                   <div className='w-[30px] h-[20px] mt-[-18px] md:block hidden'>

@@ -9,7 +9,7 @@ const Book = () => {
     return (
         <>
 
-            
+
             <section className="main-section flex w-[100%] items-center justify-center md:justify-between px-2 md:px-5">
                 <div className="main-container flex md:flex-row flex-col justify-center w-[100%] h-auto relative">
                     <div className="banner banner2 w-[100%] md:w-[73%] md:mx-3">
@@ -17,9 +17,9 @@ const Book = () => {
                         <img src="https://media.lalpathlabs.com/images/lead-page/mobilebanner1.jpg" alt="" className="mobilebanner w-full mobilebanner1 block md:hidden" />
                     </div>
 
-                    <div className="leadform-box m-auto bg-[#f4faff] mt-3 md:mt-0 items-center flex flex-col w-[80%] md:w-[23%] h-[425px] justify-center rounded-2xl">
+                    <div className="leadform-box m-auto bg-[#f4faff] mt-3 md:mt-0 items-center flex flex-col w-[80%] md:w-[23%] h-[425px] justify-center rounded-lg pb-5 md:pb-0 border-2 border-[rgba(252_192_80)]">
 
-                        <h2 className="form-title color-[#0054a5] uppercase text-center mt-1">Book Your Test</h2>
+                        <h2 className="form-title text-[#0054a5] uppercase text-center mt-3">Book Your Test</h2>
                         <form action="#" className="form-box py-1 px-2 mt-2 mx-1 relative flex flex-col justify-center content-center">
                             <div className="form-element">
                                 <input name="PatientName" type="text" id="PatientName" placeholder="Name" className="form-input w-full h-9 outline-none border-[#479bff] border-solid border align-middle p-2 rounded-md" />
@@ -81,7 +81,7 @@ const Book = () => {
                     <div className="text-left w-100 book_test_heading">
                         <strong >TEST DETAILS</strong>
                     </div>
-                    <div className="book_test_details mt-3 text-sm md:text-base">
+                    <div className="book_test_details mt-3 mx-auto text-sm md:text-base">
 
                         <p>HbA1c also called Glycated hemoglobin gives the average sugar level in the body over a period of 2 to 3 months unlike blood sugar which indicates daily level. This test is used to diagnose prediabetes, diagnose type 1 and type 2 diabetes &amp; monitor your diabetes treatment plan. Initial A1C test also helps to establish your baseline level. How often you need this test depends on the type of diabetes, your treatment plan, how well you are meeting treatment goals and your doctor's clinical judgment. The recommended protocol for this test is: Once every year if you have prediabetes; Twice a year if you do not use insulin and your blood sugar level is consistently within your target range; Four times a year if you take insulin or have trouble keeping your blood sugar level within your target range</p>
 
@@ -92,11 +92,11 @@ const Book = () => {
             <section className="card-section w-full flex justify-center flex-col items-center">
                 <div className="container card-container p-3">
                     <div className="card-div w-auto flex flex-col items-center justify-center">
-                        <h2 className='text-[#0559ab] text-2xl m-4 p-3 font-semibold'>Why Dr Lal PathLabs ?</h2>
-                        <hr className="divider w-[70%] h-1 rounded-sm outline-none opacity-80 mt-3" />
-                        <div className="cards grid grid-cols-1 gap-0 m-5 p-5 md:grid-cols-4 md:gap-5 ">
+                        <h2 className='text-[#0559ab] text-base md:text-2xl m-1 md:m-4 md:p-3 p-1 font-semibold'>Why Dr Lal PathLabs ?</h2>
+                        <hr id="achievements-divider" className="divider bg-[#0559ab] h-[3px] w-[67%]" />
+                        <div className="cards grid grid-cols-1 sm:grid-cols-2 gap-0 m-4 md:p-4 p-2 lg:grid-cols-4 md:gap-5 ">
                             <div className="card-items">
-                                <div className="icons h-[250px] w-[230px] shadow-[0px_1px_4px_rgba(0,0,0,.16)] rounded-md m-3 p-3 flex justify-center items-center flex-col">
+                                <div className="icons hover:duration-75 hover:delay-25 hover:transition hover:scale-110 h-[250px] w-[230px] shadow-[0px_1px_4px_rgba(0,0,0,.16)] rounded-md m-3 p-3 flex justify-center items-center flex-col">
                                     <div id="Trusticon" className="icon-img p-5">
                                         <img src="https://media.lalpathlabs.com/images/lead-page/Trust-icon.png" alt="Trust-icon" className='w-[125px] h-[100px]' />
                                     </div>
@@ -144,118 +144,131 @@ const Book = () => {
             </section>
 
             <div>
-                <section className="awards dev-north-dncr">
-                    <div className="award-container">
+                <section className="awards dev-north-dncr flex flex-col justify-center items-center">
+                    <div className="award-container w-[100%] flex flex-col justify-center items-center">
                         <div className="award-heading">
-                            <h2 className="heading">Most Booked Packages</h2>
+                            <h2 className="heading text-[#0559ab] text-base md:text-2xl m-1 md:m-4 md:p-3 p-1 font-semibold">Most Booked Packages</h2>
                         </div>
-                        <hr id="achievements-divider" className="divider" />
-                        <div className="card-booked-main">
-                            <div className="card-booked">
-                                <div className="card-header-booked">
+                        <hr id="" className="divider bg-[#0559ab] h-[3px] w-[67%]" />
+                        <div className="card-booked-main grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 md:p-4 md:m-4 m-2 p-2 ">
+                            <div className="card-booked w-[300px] text-center m-3 shadow-[0px_1px_4px_rgba(0,0,0,.16)] bg-white rounded-[5px]">
+                                <div className="card-header-booked text-[#0554ab] bg-[#ddedff] px-4 py-3 font-semibold text-base">
                                     <h1 >LIVER &amp; KIDNEY PANEL</h1>
                                 </div>
-                                <div className="card-booked-content">
-                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" alt="" />
-                                    <p >Parameters Covered :</p>
-                                    <span >18</span>
+                                <div className="card-booked-content flex justify-center px-3 py-5 text-lg">
+                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" className='pr-1' alt="" />
+                                    <p className=' text-[#565555]'>Parameters Covered :</p>
+                                    <span className='text-[#0554ab] font-semibold'>18</span>
                                 </div>
-                                <div className="booked-price">
-                                    <p >Price :</p>
-                                    <span >₹ 1550</span>
-                                </div>
-                                <div className="booked-button">
-                                    <a type="submit" className="btn">Book Now</a>
-                                </div>
-                            </div>
-                            <div className="card-booked">
-                                <div className="card-header-booked">
-                                    <h1 >HbA1c; GLYCOSYLATED HEMOGLOBIN</h1>
-                                </div>
-                                <div className="card-booked-content">
-                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" alt="" />
-                                    <p >Parameters Covered :</p><span >2</span>
-                                </div>
-                                <div className="booked-price">
-                                    <p >Price :</p>
-                                    <span >₹ 440</span>
+                                <div className="booked-price flex justify-center text-lg px-2 pb-5">
+                                    <p className='text-[#565555]'>Price :</p>
+                                    <span className='text-[#49a461] font-semibold'>₹ 1550</span>
                                 </div>
                                 <div className="booked-button">
-                                    <a type="submit" className="btn">Book Now</a>
+                                    <a type="submit" className="btn bg-[#0554ab] text-white py-1 px-8 mb-4 text-lg rounded-[3px]">Book Now</a>
                                 </div>
                             </div>
-                            <div className="card-booked">
-                                <div className="card-header-booked">
-                                    <h1 >LIPID PROFILE, BASIC</h1>
+                            <div className="card-booked w-[300px] text-center m-3 shadow-[0px_1px_4px_rgba(0,0,0,.16)] bg-white rounded-[5px]">
+                                <div className="card-header-booked text-[#0554ab] bg-[#ddedff] px-4 py-3 font-semibold text-base">
+                                    <h1 >LIVER &amp; KIDNEY PANEL</h1>
                                 </div>
-                                <div className="card-booked-content">
-                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" alt="" />
-                                    <p >Parameters Covered :</p>
-                                    <span >6</span>
+                                <div className="card-booked-content flex justify-center px-3 py-5 text-lg">
+                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" className='pr-1' alt="" />
+                                    <p className=' text-[#565555]'>Parameters Covered :</p>
+                                    <span className='text-[#0554ab] font-semibold'>18</span>
                                 </div>
-                                <div className="booked-price">
-                                    <p >Price :</p>
-                                    <span >₹ 1000</span>
+                                <div className="booked-price flex justify-center text-lg px-2 pb-5">
+                                    <p className='text-[#565555]'>Price :</p>
+                                    <span className='text-[#49a461] font-semibold'>₹ 1550</span>
                                 </div>
                                 <div className="booked-button">
-                                    <a type="submit" className="btn">Book Now</a>
+                                    <a type="submit" className="btn bg-[#0554ab] text-white py-1 px-8 mb-4 text-lg rounded-[3px]">Book Now</a>
                                 </div>
                             </div>
+                            <div className="card-booked w-[300px] text-center m-3 shadow-[0px_1px_4px_rgba(0,0,0,.16)] bg-white rounded-[5px]">
+                                <div className="card-header-booked text-[#0554ab] bg-[#ddedff] px-4 py-3 font-semibold text-base">
+                                    <h1 >LIVER &amp; KIDNEY PANEL</h1>
+                                </div>
+                                <div className="card-booked-content flex justify-center px-3 py-5 text-lg">
+                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" className='pr-1' alt="" />
+                                    <p className=' text-[#565555]'>Parameters Covered :</p>
+                                    <span className='text-[#0554ab] font-semibold'>18</span>
+                                </div>
+                                <div className="booked-price flex justify-center text-lg px-2 pb-5">
+                                    <p className='text-[#565555]'>Price :</p>
+                                    <span className='text-[#49a461] font-semibold'>₹ 1550</span>
+                                </div>
+                                <div className="booked-button">
+                                    <a type="submit" className="btn bg-[#0554ab] text-white py-1 px-8 mb-4 text-lg rounded-[3px]">Book Now</a>
+                                </div>
+                            </div>
+                            <div className="card-booked w-[300px] text-center m-3 shadow-[0px_1px_4px_rgba(0,0,0,.16)] bg-white rounded-[5px]">
+                                <div className="card-header-booked text-[#0554ab] bg-[#ddedff] px-4 py-3 font-semibold text-base">
+                                    <h1 >LIVER &amp; KIDNEY PANEL</h1>
+                                </div>
+                                <div className="card-booked-content flex justify-center px-3 py-5 text-lg">
+                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" className='pr-1' alt="" />
+                                    <p className=' text-[#565555]'>Parameters Covered :</p>
+                                    <span className='text-[#0554ab] font-semibold'>18</span>
+                                </div>
+                                <div className="booked-price flex justify-center text-lg px-2 pb-5">
+                                    <p className='text-[#565555]'>Price :</p>
+                                    <span className='text-[#49a461] font-semibold'>₹ 1550</span>
+                                </div>
+                                <div className="booked-button">
+                                    <a type="submit" className="btn bg-[#0554ab] text-white py-1 px-8 mb-4 text-lg rounded-[3px]">Book Now</a>
+                                </div>
+                            </div>
+                            <div className="card-booked w-[300px] text-center m-3 shadow-[0px_1px_4px_rgba(0,0,0,.16)] bg-white rounded-[5px]">
+                                <div className="card-header-booked text-[#0554ab] bg-[#ddedff] px-4 py-3 font-semibold text-base">
+                                    <h1 >LIVER &amp; KIDNEY PANEL</h1>
+                                </div>
+                                <div className="card-booked-content flex justify-center px-3 py-5 text-lg">
+                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" className='pr-1' alt="" />
+                                    <p className=' text-[#565555]'>Parameters Covered :</p>
+                                    <span className='text-[#0554ab] font-semibold'>18</span>
+                                </div>
+                                <div className="booked-price flex justify-center text-lg px-2 pb-5">
+                                    <p className='text-[#565555]'>Price :</p>
+                                    <span className='text-[#49a461] font-semibold'>₹ 1550</span>
+                                </div>
+                                <div className="booked-button">
+                                    <a type="submit" className="btn bg-[#0554ab] text-white py-1 px-8 mb-4 text-lg rounded-[3px]">Book Now</a>
+                                </div>
+                            </div>
+                            
+                            <div className="card-booked w-[300px] text-center m-3 shadow-[0px_1px_4px_rgba(0,0,0,.16)] bg-white rounded-[5px]">
+                                <div className="card-header-booked text-[#0554ab] bg-[#ddedff] px-4 py-3 font-semibold text-base">
+                                    <h1 >LIVER &amp; KIDNEY PANEL</h1>
+                                </div>
+                                <div className="card-booked-content flex justify-center px-3 py-5 text-lg">
+                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" className='pr-1' alt="" />
+                                    <p className=' text-[#565555]'>Parameters Covered :</p>
+                                    <span className='text-[#0554ab] font-semibold'>18</span>
+                                </div>
+                                <div className="booked-price flex justify-center text-lg px-2 pb-5">
+                                    <p className='text-[#565555]'>Price :</p>
+                                    <span className='text-[#49a461] font-semibold'>₹ 1550</span>
+                                </div>
+                                <div className="booked-button">
+                                    <a type="submit" className="btn bg-[#0554ab] text-white py-1 px-8 mb-4 text-lg rounded-[3px]">Book Now</a>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <div className="card-booked-main card-booked-main1">
-                            <div className="card-booked">
-                                <div className="card-header-booked">
-                                    <h1 >Swasthfit Vitamin Package</h1>
-                                </div>
-                                <div className="card-booked-content">
-                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" alt="" />
-                                    <p >Parameters Covered :</p><span >2</span></div><div className="booked-price">
-                                    <p >Price :</p>
-                                    <span >₹ 1799</span>
-                                    <span className="price-cross">₹ 2750</span>
-                                </div><div className="booked-button">
-                                    <a type="submit" className="btn">Book Now</a>
-                                </div></div>
-                            <div className="card-booked">
-                                <div className="card-header-booked">
-                                    <h1 >SWASTHFIT COMPLETE HEALTH CHECK</h1>
-                                </div>
-                                <div className="card-booked-content">
-                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" alt="" />
-                                    <p >Parameters Covered :</p><span >79</span></div><div className="booked-price">
-                                    <p >Price :</p>
-                                    <span >₹ 5000</span>
-                                    <span className="price-cross">₹ 8960</span></div>
-                                <div className="booked-button">
-                                    <a type="submit" className="btn">Book Now</a>
-                                </div></div>
-                            <div className="card-booked"><div className="card-header-booked">
-                                <h1 >SWASTH SUPER -2</h1></div><div className="card-booked-content">
-                                    <img src="https://media.lalpathlabs.com/images/test-tube-booked.png" alt="" />
-                                    <p >Parameters Covered :</p>
-                                    <span >53</span>
-                                </div>
-                                <div className="booked-price">
-                                    <p >Price :</p>
-                                    <span >₹ 2350</span>
-                                    <span className="price-cross">₹ 3370</span>
-                                </div>
-                                <div className="booked-button">
-                                    <a type="submit" className="btn">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </section>
 
-                <section id="testim" className="testim">
-                    <div className="testimonial-heading">
-                        <h2 className="testimonialheading">Customer Testimonials</h2>
+                <section id="testim" className="testim  w-[100%] text-center">
+                    <div className=" flex flex-col">
+                        <h2 className="testimonialheading text-2xl text-[#0559ab] p-3 m-3 font-bold">Customer Testimonials</h2>
+                        
                     </div>
                     <div className="testimonial-divider">
-                        <hr id="testimonial-divider" className="divider" />
+                    <hr id="achievements-divider" className="divider bg-[#0559ab] h-[3px] w-[67%]" />
                     </div>
-                    <div className="wrap">
+                    <div className="wrap relative w-full px-7 py-12">
                         <span id="right-arrow" className="arrow right fa fa-chevron-right">
                         </span>
                         <span id="left-arrow" className="arrow left fa fa-chevron-left">
@@ -310,124 +323,131 @@ const Book = () => {
 
                     </div>
                 </section>
-                
 
-                {/* <section className="card-section test_faqs_section">
-                    <div className="container card-container">
-                        <div className="wrap h-wrap">
-                            <div className="testimonial-heading">
-                                <h2 className="testimonialheading">Frequently Asked Questions</h2>
+
+
+                <section className='card-section w-[100%] test_faqs_section flex flex-col justify-center items-center mb-14'>
+                    <div className='md:w-[80%] w-[90%]'>
+                    <div className='h-wrap'>
+                    <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen">
+                        <div class="flex flex-col items-center">
+                            <h2 class="font-bold md:text-2xl text-xl mt-5 tracking-tight text-[#0559ab]">
+                            Frequently Asked Questions
+                            </h2>
+                           
+                        </div>
+                        <div class="grid  divide-neutral-200 mt-8">
+                            <div class="">
+                                <details class="group bg-[#ddedff] md:px-5 md:py-2 px-3 py-2 w-full rounded-[5px]">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                        <span> What is the Swasth Super 4 package? </span>
+                                        <span class="transition group-open:rotate-180">
+                                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                                        SAAS platform is a cloud-based software service that allows users to access
+                                        and use a variety of tools and functionality.
+                                    </p>
+                                </details>
                             </div>
-                            <div className="book_test_details">
-                                <div id="faq" className="accordion">
-                                    <div className="card">
-                                        <div className="card-header w-100" id="faqhead170">
-                                            <a href="#" data-toggle="collapse" aria-expanded="false" className="btn btn-header-link collapsed" target="#faq170">What is the HbA1c test? </a>
-                                        </div>
-                                        <div data-parent="#faq" className="collapse _collapse" id="faq170">
-                                            <div className="card-body">
-                                                <p>The HbA1c test is a useful and simple blood test that can be used to diagnose diabetes and also to monitor blood glucose control in people with known diabetes.&nbsp;</p>
-                                                <p>This test evaluates the average amount of glucose in the blood over the
-                                                    last 2 to 3 months. It's also called haemoglobin A1c, glycated haemoglobin,
-                                                    and glycosylated haemoglobin.&nbsp;</p>
-                                                <p>Understanding and managing the HbA1c levels is
-                                                    an essential part of overall diabetes management.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card">
-                                        <div className="card-header w-100" id="faqhead171">
-                                            <a href="#" data-toggle="collapse" aria-expanded="false" className="btn btn-header-link collapsed" target="#faq171">What does the HbA1c test measure? </a>
-                                        </div>
-                                        <div data-parent="#faq" className="collapse _collapse" id="faq171">
-                                            <div className="card-body"><p>As we all know, glucose is the sugar present in the blood.
-                                                When the amount of glucose is more in the blood, the more it binds to haemoglobin.
-                                                Haemoglobin is the part of the red blood cells that carries oxygen throughout the body. &nbsp;</p>
-                                                <p>The HbA1c test measures how much glucose is bound to the haemoglobin.&nbsp;</p>
-                                                <p>HbA1c readings are reported as a percentage and can be interpreted as below:&nbsp;</p>
-                                                <p><strong>HbA1c Level&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Indication&nbsp;</strong></p>
-                                                <p>Less than 5.7%&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Normal&nbsp;</p>
-                                                <p>5.7% to 6.4%&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Prediabetes&nbsp;</p>
-                                                <p>&gt;= 6.5%&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                                    Diabetes&nbsp;</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card">
-                                        <div className="card-header w-100" id="faqhead172">
-                                            <a href="#" data-toggle="collapse" aria-expanded="false" className="btn btn-header-link collapsed" target="#faq172">Why should I do the HbA1c test? </a>
-                                        </div>
-                                        <div data-parent="#faq" className="collapse _collapse" id="faq172">
-                                            <div className="card-body"><p>Your doctor will recommend you to take the HbA1c
-                                                test, if you suffer from some specific symptoms. The common symptoms are:&nbsp;</p>
-                                                <ul>
-                                                    <li>Increased thirst&nbsp;</li>
-                                                    <li>Increased urination&nbsp;</li>
-                                                    <li>Fatigue&nbsp;</li>
-                                                    <li>Blurred vision&nbsp;</li>
-                                                    <li>Slow-healing wounds&nbsp;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card">
-                                        <div className="card-header w-100" id="faqhead173">
-                                            <a href="#" data-toggle="collapse" aria-expanded="false" className="btn btn-header-link collapsed" target="#faq173">How is the HbA1c test done? </a>
-                                        </div>
-                                        <div data-parent="#faq" className="collapse _collapse" id="faq173">
-                                            <div className="card-body"><p>The HbA1c test is a simple blood test with no need
-                                                for fasting before the test. The blood sample can be taken by
-                                                the doctor or at a pathology lab</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card">
-                                        <div className="card-header w-100" id="faqhead174">
-                                            <a href="#" data-toggle="collapse" aria-expanded="false" className="btn btn-header-link collapsed" target="#faq174">How does HbA1c differ from a blood glucose level? </a>
-                                        </div>
-                                        <div data-parent="#faq" className="collapse _collapse" id="faq174">
-                                            <div className="card-body">
-                                                <p>HbA1c provides a longer-term trend, similar to an average,
-                                                    of how high the blood sugar levels have been over a period of time
-                                                    whereas blood glucose level is the concentration of glucose in the
-                                                    blood at a single point in time</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card">
-                                        <div className="card-header w-100" id="faqhead175">
-                                            <a href="#" data-toggle="collapse" aria-expanded="false" className="btn btn-header-link collapsed" target="#faq175">How often HbA1c levels should be checked? </a>
-                                        </div>
-                                        <div data-parent="#faq" className="collapse _collapse" id="faq175">
-                                            <div className="card-body">
-                                                <div className="OutlineElement Ltr SCXW134383245 BCX0">
-                                                    <p className="Paragraph SCXW134383245 BCX0">
-                                                        <span className="TextRun Highlight SCXW134383245 BCX0" lang="EN-GB">
-                                                            <span className="NormalTextRun SCXW134383245 BCX0">HbA1c levels may be checked every
-                                                                three months until a person with diabetes reaches the
-                                                                treatment goals.</span>
-                                                        </span>
-                                                        <span className="EOP SCXW134383245 BCX0">&nbsp;</span>
-                                                    </p>
-                                                </div>
-                                                <div className="OutlineElement Ltr SCXW134383245 BCX0">
-                                                    <p className="Paragraph SCXW134383245 BCX0"><span className="TextRun Highlight SCXW134383245 BCX0" lang="EN-GB"><span className="NormalTextRun SCXW134383245 BCX0">People with diabetes who are meeting treatment goals and have stable blood control are recommended to check their HbA1c levels every six months.</span></span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="mt-6">
+                                <details class="group bg-[#ddedff] md:px-5 md:py-2 px-3 py-2">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                        <span> What does the Swasth Super 4 package measure? </span>
+                                        <span class="transition group-open:rotate-180">
+                                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                                        We offers a variety of billing options, including monthly and annual subscription plans,
+                                        as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit
+                                        card or other secure online payment method.
+                                    </p>
+                                </details>
                             </div>
+                            <div class="mt-6">
+                                <details class="group bg-[#ddedff] md:px-5 md:py-2 px-3 py-2">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                        <span>When is the Swasth Super 4 package recommended? </span>
+                                        <span class="transition group-open:rotate-180">
+                                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                                        We offers a 30-day money-back guarantee for most of its subscription plans. If you are not
+                                        satisfied with your subscription within the first 30 days, you can request a full refund. Refunds
+                                        for subscriptions that have been active for longer than 30 days may be considered on a case-by-case
+                                        basis.
+                                    </p>
+                                </details>
+                            </div>
+                            <div class="mt-6">
+                                <details class="group bg-[#ddedff] md:px-5 md:py-2 px-3 py-2">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                        <span> How is the Swasth Super 4 package performed? </span>
+                                        <span class="transition group-open:rotate-180">
+                                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                                        To cancel your We subscription, you can log in to your account and navigate to the
+                                        subscription management page. From there, you should be able to cancel your subscription and stop
+                                        future billing.
+                                    </p>
+                                </details>
+                            </div>
+                            <div class="mt-6">
+                                <details class="group bg-[#ddedff] md:px-5 md:py-2 px-3 py-2">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                        <span> What are the risks of the Swasth Super 4 package? </span>
+                                        <span class="transition group-open:rotate-180">
+                                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                                        We offers a free trial of its  platform for a limited time. During the trial period,
+                                        you will have access to a limited set of features and functionality, but you will not be charged.
+                                    </p>
+                                </details>
+                            </div>
+                            <div class="mt-6 mb-6">
+                                <details class="group bg-[#ddedff] md:px-5 md:py-2 px-3 py-2">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                        <span>What the results may indicate? </span>
+                                        <span class="transition group-open:rotate-180">
+                                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                                        Documentation is available on the company's website and can be accessed by
+                                        logging in to your account. The documentation provides detailed information on how to use the ,
+                                        as well as code examples and other resources.
+                                    </p>
+                                </details>
+                            </div>
+                            
+
+
                         </div>
                     </div>
-                </section> */}
+                    </div>
+                    </div>
+                </section>
+
             </div>
 
 
 
             <button id="floatBtn" className="feedback" style={{ display: "block" }}>Booking Request</button>
 
-            <section className="bg-[#f5bb17] relative left-0 bottom-0 w-[100%] mt-5 px-2">
+            <section className="bg-[#f5bb17] relative left-0 bottom-0 w-[100%] mt-5 px-2 py-4 md:block hidden">
                 <div className="footerdiv p-3 my-1 mx-8 text-sm color-[#000]">
                     <p>© 2023, Dr. Lal PathLabs</p>
                     <p id="para1">LPL holds the right to terminate the offers at any time without any prior notice.</p>
@@ -441,10 +461,10 @@ const Book = () => {
 
 Book.getLayout = function getLayout(page) {
     return (
-  
+
         <NestedLayout>{page}</NestedLayout>
     )
-  }
+}
 
 
 export default Book
