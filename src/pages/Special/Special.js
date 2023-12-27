@@ -8,6 +8,7 @@ const Special = () => {
   return (
     <>
          <Pack itemsPerPage={4}/>
+         
     </>
   )
 }

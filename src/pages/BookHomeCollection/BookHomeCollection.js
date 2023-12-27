@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
-
 import Link from 'next/link';
 import Layout from '@/Layout/layout';
 import NestedLayout from '@/Layout/NestedLayout';
 
 
-const Book = () => {
+const BookHomeCollection = () => {
+    
 
     const [form, setForm] = useState({})
 
     const [errors, setErrors] = useState({})
+
+    const [showOtpInput, setShowOtpInput] = useState(false);
+
+    const [isMobileNumberValid, setIsMobileNumberValid] = useState(false);
+
 
     const ValidateField = (field, value) => {
         switch (field) {
@@ -32,15 +37,20 @@ const Book = () => {
         })
 
         const fieldErrors = ValidateField(field, value);
+
         setErrors({
             ...errors,
             [field]: fieldErrors,
         });
 
+        if (field === 'PhoneNumber') {
+            setIsMobileNumberValid(!fieldErrors);
+        }
+
     }
 
     const ValidateForm = () => {
-        const { PatientName, PhoneNumber,City ,condition, whatsapp} = form;
+        const { PatientName, PhoneNumber, City, condition, whatsapp } = form;
         const newErrors = {}
 
         if (!PhoneNumber || (PhoneNumber.length > 0 && PhoneNumber.length !== 10)) {
@@ -80,10 +90,10 @@ const Book = () => {
 
     const scrollToTop = () => {
         window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+            top: 0,
+            behavior: "smooth",
         });
-      };
+    };
 
 
 
@@ -108,11 +118,30 @@ const Book = () => {
                                 </div>
 
                             </div>
-                            <div className="form-element pb-4">
-                                <input maxLength={10} onBlur={(e) => setField('PhoneNumber', e.target.value)} onChange={(e) => setField('PhoneNumber', e.target.value)} name="PhoneNumber" type="text" id="PhoneNumber" placeholder="Mobile Number" className="form-input w-full h-9 outline-none border-[#479bff] border-solid border align-middle p-2 rounded-md" />
+                            <div className="form-element w-full pb-4">
+                                <div className='flex '>
+                                    <input maxLength={10} onBlur={(e) => setField('PhoneNumber', e.target.value)} onChange={(e) => setField('PhoneNumber', e.target.value)} name="PhoneNumber" type="text" id="PhoneNumber" placeholder="Mobile Number" className="form-input w-[60%] h-9 outline-none border-[#479bff] border-solid border align-middle p-2 rounded-md" />
+                                    <div class="w-[40%] pl-2">
+                                        <button disabled={!isMobileNumberValid}   onClick={() => setShowOtpInput(true)} class="btn btn-loginn btn-loginn-aff bg-[#fecc4e] p-[6px] ml-2 rounded-md" >Send OTP</button>
+                                    </div>
+                                </div>
                                 <div className="text-sm pt-1 text-red-500">
                                     <div> {errors.PhoneNumber} </div>
                                 </div>
+
+                                {showOtpInput && (
+                                    <div className="flex mt-3">
+                                        <input
+                                            type="text"
+                                            // Add necessary props and styles for OTP input
+                                            placeholder="Enter OTP"
+                                            className="form-input w-[60%] h-9 outline-none border-[#479bff] border-solid border align-middle p-2 rounded-md"
+                                        />
+                                        {/* Add submit button or any other action buttons here */}
+                                    </div>
+                                )}
+
+                               
 
                             </div>
                             <div className="form-element pb-4">
@@ -147,7 +176,7 @@ const Book = () => {
                 </div>
             </section>
 
-            
+
 
             <section className="card-section mt-3 test_details_overview md:mx-40 ml-5 mr-5 mb-5 rounded-lg bg-[#e9f3ff] md:bg-white">
                 <div className="card-container p-3">
@@ -532,7 +561,7 @@ const Book = () => {
     )
 }
 
-Book.getLayout = function getLayout(page) {
+BookHomeCollection.getLayout = function getLayout(page) {
     return (
 
         <NestedLayout>{page}</NestedLayout>
@@ -540,5 +569,4 @@ Book.getLayout = function getLayout(page) {
 }
 
 
-export default Book
-
+export default BookHomeCollection

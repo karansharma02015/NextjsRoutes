@@ -5,13 +5,15 @@ import Book from "./Book/Book"
 
 
 export default function Home(page) {
+
+
   return (
- 
-  <NestedLayout>
 
-    <Book></Book>
+    <NestedLayout>
 
-  </NestedLayout>
-  
+      <Book></Book>
+
+    </NestedLayout>
+
   )
 }
