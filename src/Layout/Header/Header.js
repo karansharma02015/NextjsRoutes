@@ -19,7 +19,7 @@ const Header = () => {
                   <a href="javascript:void(0)" id="indexOfelement_1" class="text-xs md:text-base"> DOCTORS </a>
                   <a href="javascript:void(0)" id="indexOfelement_2" class="text-xs md:text-base"> BUSINESS PARTNERSHIP </a>
                   <a href="javascript:void(0)" id="indexOfelement_3" class="text-xs md:text-base"> ABOUT US </a>
-                  <a href="javascript:void(0)" id="indexOfelement_4" class="text-xs md:text-base"> INVESTORS </a>
+                  <Link href="/" id="indexOfelement_4" class="text-xs md:text-base"> INVESTORS </Link>
                   <a href="javascript:void(0)" id="indexOfelement_5" class="text-xs md:text-base"> CONTACT US </a>
                 </div>
 

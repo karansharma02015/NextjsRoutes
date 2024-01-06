@@ -114,11 +114,7 @@ const Test = () => {
 
                                     </ul>
                                 </div>
-                                <div className="col-span-3 right-search right-aligns">
-                                    <div className="nav-item srch-input-2">
-                                        <input type="search" placeholder="Search Test" className="ng-untouched ng-pristine ng-valid" onChange={(e) => searchItems(e.target.value)} />
-                                    </div>
-                                </div>
+                               
                             </div>
 
                             <div className=''>

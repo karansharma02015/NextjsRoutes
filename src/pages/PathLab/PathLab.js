@@ -7,6 +7,7 @@ import Layout from '@/Layout/layout'
 import PopularTest from './PopularTest'
 import Test from './Test'
 import Promotion from './Promotion'
+import Faq from './Faq'
 
 const PathLab = () => {
   return (
@@ -19,6 +20,7 @@ const PathLab = () => {
         <PopularTest/>
         <Test/>
         <Promotion/>
+        <Faq/>
     </>
   )
 }
