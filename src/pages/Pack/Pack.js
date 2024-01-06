@@ -27,7 +27,7 @@ const Pack = ({ itemsPerPage }) => {
 
     const handlePageClick = (e) => {
         const newOffset = (e.selected * 24) % items.length;
-        console.log(`url requested page number ${e.selected}, which is offset ${newOffset}`)
+        console.log(`url requested ddd page number ${e.selected}, which is offset ${newOffset}`)
         setItemOffSet(newOffset);
     }
 
