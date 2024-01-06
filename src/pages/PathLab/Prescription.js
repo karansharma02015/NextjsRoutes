@@ -1,6 +1,10 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Prescription = () => {
+
+    
+    
     return (
         <>
 
@@ -24,12 +28,12 @@ const Prescription = () => {
                             </a>
                         </div>
                         <div class="top-circle my-5 border-r">
-                            <a >
+                            <Link href='/Upload/Upload'>
                                 <div class="top-circle-img mb-3">
                                     <img class="mx-auto d-block w-16" src="https://uat-cdn.drlallab.com/2021-08/Webp.net-resizeimage%20%283%29.png" alt="Upload Prescription Icon" />
                                 </div>
                                 <p className='text-center  text-white text-sm md:text-lg'>Upload Prescription</p>
-                            </a>
+                            </Link>
                         </div>
                         <div class="top-circle my-5 border-r">
                             <a >

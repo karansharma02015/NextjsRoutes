@@ -30,7 +30,7 @@ return (
     <>
 
         <div>
-            <input onChange={(e)=> setQuery(e.target.value)} value={query} type='text' placeholder='Start Typing' />
+            <input className='p-2' onChange={(e)=> setQuery(e.target.value)} value={query} type='text' placeholder='Start Typing' />
             <ul>
                 {
                     results.map((users, index) => (

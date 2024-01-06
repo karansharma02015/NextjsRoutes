@@ -15,6 +15,7 @@ const Pack = ({ itemsPerPage }) => {
     const [selectedItems, setSelectedItems] = useState([]);
     const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
     const [itemOffset, setItemOffSet] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0); 
 
 
     const endOffset = itemOffset + 24;
@@ -33,6 +34,7 @@ const Pack = ({ itemsPerPage }) => {
 
     const categoryChange = (index) => {
         console.log('hel')
+        setActiveIndex(index);
         if (index < 2) {
             setSelectedCategoryIndex(index);
             setItemOffSet(0);  
@@ -58,9 +60,9 @@ const Pack = ({ itemsPerPage }) => {
 
     useEffect(() => {
         fetch('https://liveapi.lalpathlabs.com/api/UI/GetJsonByPage?x-api-version=1&SiteId=1&PageUrl=test-menu-pat')
-            .then(res => res.json())
+            .then(res => res.json())            
             .then(
-                (result) => {
+                (result) => {       
                     setIsLoaded(true);
                     setItems(result.Data.body.section[0].item[selectedCategoryIndex].subitem);
                     setSelectedItems(result.Data.body.section[0].item);
@@ -100,7 +102,7 @@ const Pack = ({ itemsPerPage }) => {
                     <div className="mx-20 mt-6">
                         <div className="row radius-inner px-5">
                             <div className='grid-cols-1'>
-                                <h3>Search Test and Packages</h3>
+                                <h3 className='pl-3 pt-4 font-bold text-2xl'>Search Test and Packages</h3>
                             </div>
 
                             <div className="grid grid-flow-col items-center">
@@ -110,8 +112,8 @@ const Pack = ({ itemsPerPage }) => {
 
                                         {
                                             selectedItems.map((category, index) => (
-                                                <li className="nav-item ng-star-inserted" key={index}>
-                                                    <button data-toggle="tab" href="#s1" className="nav-link ng-star-inserted" onClick={() => categoryChange(index)}>{category.label}</button>
+                                                <li className="nav-item  ng-star-inserted" key={index}>
+                                                    <button data-toggle="tab" href="#s1" className={`nav-link ${index === activeIndex ? 'active ng-star-inserted' : ''}`} onClick={() => categoryChange(index)}>{category.label}</button>
                                                 </li>
                                             ))
                                         }
@@ -166,7 +168,7 @@ function Pagination({ currentItems, searchInput, items, filteredResults }) {
 
                         <div className="search-slider2 ng-star-inserted fade" key={item.orderby}>
                             <div className="item" >
-                                <a target="_blank" href="/test-for-abortions">
+                                <a target="_blank" href={item.url}>
                                     <div className="search-img">
                                         <img className="mx-auto d-block " src={item.img} />
                                     </div>
@@ -181,7 +183,7 @@ function Pagination({ currentItems, searchInput, items, filteredResults }) {
 
                         <div className="search-slider2 ng-star-inserted" key={item.orderby}>
                             <div className="item" >
-                                <a target="_blank" href="/test-for-abortions">
+                                <a target="_blank" href={item.url}>
                                     <div className="search-img">
                                         <img className="mx-auto d-block" src={item.img} />
                                     </div>

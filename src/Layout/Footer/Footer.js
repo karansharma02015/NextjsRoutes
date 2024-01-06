@@ -158,8 +158,8 @@ const Footer = () => {
 
                 
             </footer>
-            <div class="copyright-div">
-                    <div class="md:px-20 px-3 pb-3">
+            <div class="copyright-div bg-[#0047ae] text-white text-sm   ">
+                    <div class="md:px-20 px-3 pb-3 py-5">
                         <div class="grid grid-cols-5">
                             <div class="col-span-4">
                                 <div class="row footer-content">
@@ -170,7 +170,7 @@ const Footer = () => {
                                         </p>
                                     </div>
                                     <div class="col-md-12">
-                                        <div class="footer-bottm-link">
+                                        <div class="footer-bottm-link text-white">
                                             <span class="ng-star-inserted">
                                                 <a target="_blank" href="/blog" class="ng-star-inserted"> Blog | </a>
                                             </span>
