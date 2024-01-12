@@ -8,9 +8,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 
 
-
-
-
 export default function App({ Component, pageProps }) {
   
   const getLayout = Component.getLayout || ((Layout) => Layout)

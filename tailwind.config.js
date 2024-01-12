@@ -6,6 +6,5 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
   ],
 
-  
   // other configuration options
 };

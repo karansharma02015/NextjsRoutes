@@ -1,10 +1,81 @@
 import Link from 'next/link'
-import React from 'react'
-import AutoComplete from '../AutoComplete'
+import React, { useEffect, useState } from 'react'
+
 
 const Header = () => {
 
-  
+  const [inputValue, setInputValue] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+  const [isInputFocused, setIsInputFocused] = useState(false);
+
+  useEffect(() => {
+    const fetchSuggestion = async () => {
+      try {
+
+        const response = await fetch(`https://admin-api.lalpathlabs.com/api/test/elastic/search?search_string=${inputValue}&result_size=2&user_session_uid=undefined&city_name=delhi`, {
+          headers: {
+            'x-access-token': `60f291aa46ea447060f291aa46ea447019d83ba30be508e419d83ba30be508e4`
+          }
+        })
+
+        if (!response.ok) {
+          throw new Error(`Failed to fetch suggestions. Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+
+        if (Array.isArray(data.Data.result)) {
+          const filteredSuggestions = data.Data.result
+            .map(item => (item.suggestions || [])
+              .filter(suggestion =>
+                typeof suggestion === 'string' && suggestion.label.toLowerCase().includes(inputValue.toLowerCase())
+              )
+            )
+            .flat();
+          console.log(filteredSuggestions);
+          setSuggestions(filteredSuggestions);
+
+        }
+        else {
+          console.error('Invalid data structure. Expected "result" to be an array.');
+        }
+
+        console.log(data.Data.result);
+        setSuggestions(data.Data.result);
+      }
+      catch (error) {
+        console.log(error + ' fetching suggestion failed');
+      }
+    };
+
+    if (inputValue !== '') {
+      fetchSuggestion();
+    }
+    else {
+      setSuggestions([]);
+    }
+  }, [inputValue]);
+
+
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+  }
+
+  const handleInputBlur = () => {
+    setSuggestions([]);
+  };
+
+  const handleInputFocus = () => {
+    setIsInputFocused(false);
+  };
+
+  const handleSelectSuggestion = (suggestion) => {
+    setInputValue(suggestion);
+    setSuggestions([]);
+  }
+
+
   return (
     <>
       <div id="main_layout">
@@ -13,13 +84,13 @@ const Header = () => {
           <div class="top-header-strip hide-on-mbl bg-[#fecc4e] py-2.5 w-full hidden md:block">
             <div class="">
               <div class="">
-                
+
                 <div class="flex md:justify-evenly">
                   <a href="javascript:void(0)" id="indexOfelement_0" class="active text-xs md:text-base"> PATIENTS </a>
                   <a href="javascript:void(0)" id="indexOfelement_1" class="text-xs md:text-base"> DOCTORS </a>
                   <a href="javascript:void(0)" id="indexOfelement_2" class="text-xs md:text-base"> BUSINESS PARTNERSHIP </a>
                   <a href="javascript:void(0)" id="indexOfelement_3" class="text-xs md:text-base"> ABOUT US </a>
-                  <Link href="/" id="indexOfelement_4" class="text-xs md:text-base"> INVESTORS </Link>
+                  <Link href="/Investor/InvestorInside" id="indexOfelement_4" class="text-xs md:text-base"> INVESTORS </Link>
                   <a href="javascript:void(0)" id="indexOfelement_5" class="text-xs md:text-base"> CONTACT US </a>
                 </div>
 
@@ -50,13 +121,50 @@ const Header = () => {
                   </button>
                   <div class="relative hidden md:block">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                      
+
                       <span class="sr-only">Search icon</span>
                     </div>
-                    <AutoComplete />
-                    
+
+                    <div className='ng-autocomplete'>
+                      <div className='autocomplete-container active'>
+                        <div className='input-container'>
+                          <input value={inputValue} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur} className='p-2 focus:outline-none' type='text' placeholder='Start Typing' />
+                        </div>
+                        <div class="suggestions-container is-visible">
+                          <ul>
+
+                            {
+                              suggestions.map((suggestion) => (
+                                <li class="item ng-star-inserted" onClick={() => handleSelectSuggestion(suggestion)}>
+
+                                  <div class="ng-star-inserted">
+
+                                    <div class="ng-star-inserted">
+                                      <a>
+                                        <span>{suggestion.label}</span>
+                                      </a>
+                                    </div>
+
+                                  </div>
+                                </li>
+                              ))
+                            }
+
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    {/* <ul>
+                      {suggestions.map((suggestion) => (
+                        <li key={suggestion.unique_id} onClick={() => handleSelectSuggestion(suggestion)}>
+                          {suggestion.label}
+                        </li>
+                      ))}
+                    </ul> */}
 
                   </div>
+
                   <div className='w-[30px] h-[20px] mt-[-18px] md:block hidden'>
                     <a href="/home/cart" class="shooping-bag relative left-4 w-[30px] ml-[30px] m-0 p-0">
                       <img src="https://uat-cdn.drlallab.com/2022-12/cart-plus.png" alt="Cart Plus Icon" className='' />

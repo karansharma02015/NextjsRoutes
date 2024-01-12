@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 const InvestorInside = () => {
 
     const [activeTab, setActiveTab] = useState('f1');
-    
+
 
     const handleTabClick = (tabId) => {
         setActiveTab(tabId);
@@ -19,8 +19,8 @@ const InvestorInside = () => {
                 <div className='w-[1350px] pt-4'>
 
                     <div className='bg-white py-5 mb-6 rounded-2xl'>
-                        
-                        
+
+
 
                         <ul class="nav mt-6 ml-3 nav-tabs faq-tab">
                             <li class="nav-item ng-star-inserted">
@@ -32,9 +32,17 @@ const InvestorInside = () => {
                             <li class="nav-item ng-star-inserted">
                                 <a data-toggle="tab" onClick={() => handleTabClick('f3')} className={`cursor-pointer nav-link ${activeTab === 'f3' ? 'active show' : ''}`}>Corportate Information</a>
                             </li>
-                            
+
                         </ul>
+
+                        <div class="text-center mt-8">
+                            <strong>Disclosures under Regulation 46 of the SEBI (LODR) Regulations, 2015</strong>
+                        </div>
+
+                        
                     </div>
+
+
                 </div>
             </section>
 

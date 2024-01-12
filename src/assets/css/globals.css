@@ -1281,3 +1281,258 @@ body {
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
+
+.results-list {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px #ddd;
+    border-radius: 10px;
+    margin-top: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+
+  .autocomplete-container .suggestions-container.is-visible {
+    visibility: visible;
+}
+
+
+.autocomplete-container .suggestions-container {
+    position: absolute;
+    width: 145%;
+    background: #fff;
+    height: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,.25);
+    box-sizing: border-box;
+}
+.autocomplete-container .suggestions-container ul {
+    padding: 0;
+    margin: 0;
+    max-height: 240px;
+    overflow-y: auto !important;
+}
+
+.autocomplete-container .suggestions-container ul li {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.search-category-name, .search-category-name:hover {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    background: #ebebeb;
+    color: #000;
+}
+
+li div.search-category-name:after {
+    content: url(https://uat-cdn.drlallab.com/images/col-out-icon.png);
+    width: 10px;
+    float: right;
+    transform: scale(.7);
+}
+
+.city .ng-autocomplete .autocomplete-container {
+    height: 50px!important;
+    box-shadow: none!important;
+}
+
+
+.autocomplete-container.active {
+    z-index: 999;
+}
+
+.autocomplete-container {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+    position: relative;
+    overflow: visible;
+   
+}
+
+.autocomplete-container .suggestions-container ul li a {
+    padding: 10px!important;
+    cursor: pointer!important;
+    background-color: #fff!important;
+    border-bottom: 1px solid #d4d4d4!important;
+    font-size: 14px!important;
+    white-space: pre-wrap!important;
+}
+
+.ng-autocomplete .input-container input[type=text] {
+    width: 100%;
+    outline-offset: 0!important;
+    padding: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff url(https://uat-cdn.drlallab.com/images/search.png)!important;
+    background-repeat: no-repeat!important;
+    background-position: 95% 50%!important;
+    border: none;
+    border-bottom: 2px solid #448ac0;
+    border-radius: 4px;
+}
+
+
+.autocomplete-container .input-container input {
+    font-size: 14px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: none;
+    outline: 0;
+    background-color: #fff;
+    color: rgba(0,0,0,.87);
+    width: 100%;
+    padding: 0 15px;
+    line-height: 40px;
+    height: 40px;
+}
+
+.autocomplete-container {
+    height: 40px!important;
+    box-shadow: none!important;
+}
+
+.ng-autocomplete .input-container input[type=text] {
+    width: 145%;
+    outline-offset: 0!important;
+    padding: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff url(https://uat-cdn.drlallab.com/images/search.png)!important;
+    background-repeat: no-repeat!important;
+    background-position: 95% 50%!important;
+    border: none;
+    border-bottom: 2px solid #448ac0;
+    border-radius: 4px;
+}
+
+
+.autocomplete-container .input-container input {
+    font-size: 14px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: none;
+    outline: 0;
+    background-color: #fff;
+    color: rgba(0,0,0,.87);
+    width: 100%;
+    padding: 0 15px;
+    line-height: 40px;
+    height: 40px;
+}
+
+
+
+
+/* Home collection */
+
+.pageContentDiv, .row.radius-inner {
+    background: #fff;
+    padding: 20px 0;
+    margin-bottom: 25px;
+}
+
+.border-corner, .border-rad img, .border_rounded img, .featured-slider-details img, .packedge-inner.courses img, .rounded-img img, .row.radius-inner {
+    border-radius: 15px;
+}
+
+.happy-to-hear h3, .our-newlabsimg {
+    padding: 15px 0;
+}
+
+.section-heading1, .text-blk a h3 {
+    font-size: 25px;
+    color: #181818;
+    font-weight: 700;
+}
+
+.blog-categories h3, .blog-category-sec h3, .copyright-div img, .csr-team h3, .family-offers .popular-inner p, .ptp, .result-kit .section-heading1, .swathfit-sec .popular-inner p, .testimonial-sec .section-heading1, form.carecard-form .form-group, form.covid-test-form .form-group, form.happy-to-hear-form .form-group, form.job-add-details .form-group, form.job-add-details h3, section.how-dowe-doit h3 {
+    margin-bottom: 20px;
+}
+
+.inner-content ul li, form.happy-to-hear-form .form-group label, form.job-add-details .form-group label {
+    margin-bottom: 5px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .875em;
+    color: #dc3545;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.cmnyellow-btn {
+    background: #fecc4e;
+    display: inline-block;
+    width: auto;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 10px 50px;
+}
+
+button.btn.btn-loginn {
+    background: #fecc4e;
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    margin: 20px 0;
+}
+
+.pageContentDiv, .row.radius-inner {
+    background: #fff;
+    padding: 20px 0;
+    margin-bottom: 25px;
+}
